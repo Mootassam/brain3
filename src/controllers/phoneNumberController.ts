@@ -23,9 +23,9 @@ class PhoneNumberController {
   static client: any; // Declare a static variable to store the client instance
   static isConnected: boolean = false; // Track the connection status
 
-  static async generatePhoneNumbers(req, res, io: any) {
+  static async generatePhoneNumbers(req: Request, res, io: any) {
     try {
-      const phoneNumbers = await PhoneNumberGenerator.generatePhoneNumbers();
+      const phoneNumbers = await PhoneNumberGenerator.generatePhoneNumbers(req);
       res.json(phoneNumbers);
     } catch (error) {
       res.status(500).json({ error: "Internal server error" });

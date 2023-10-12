@@ -8,7 +8,7 @@ const router: Router = express.Router();
 // Route to generate phone numbers
 
 const phoneNumberRoutes = (io: any) => {
-  router.get("/generate", async (req: Request, res: Response) => {
+  router.post("/generate", async (req: Request, res: Response) => {
     try {
       const phoneNumbers = await PhoneNumberController.generatePhoneNumbers(
         req,

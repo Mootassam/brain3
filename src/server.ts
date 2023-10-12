@@ -37,8 +37,6 @@ mongoose
   });
 // Add Socket.io event handling here
 io.on("connection",  (socket) => {
-  // You can handle custom Socket.io events here
-    console.log("connected user ");
 
 });
 const phoneNumberRoutesWithIO = phoneNumberRoutes(io);
