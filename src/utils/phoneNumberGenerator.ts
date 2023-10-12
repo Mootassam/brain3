@@ -2,7 +2,7 @@ import UserModel from "../models/User";
 import CountryFormat from "./CountryFormat";
 class PhoneNumberGenerator {
   static async generatePhoneNumbers(req) {
-    let countryCode = req.body.country;
+    let countryCode = req.body.country.value;
     const phoneNumbers: string[] = [];
     const formatFunction = CountryFormat[countryCode];
     for (let i = 0; i < 1000; i++) {
