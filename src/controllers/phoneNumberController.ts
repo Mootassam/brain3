@@ -25,8 +25,6 @@ class PhoneNumberController {
 
   static async generatePhoneNumbers(req, res, io: any) {
     try {
-
-     
       const phoneNumbers = await PhoneNumberGenerator.generatePhoneNumbers();
       res.json(phoneNumbers);
     } catch (error) {
@@ -46,7 +44,6 @@ class PhoneNumberController {
         const client = new Client();
         PhoneNumberController.client = client;
         client.on("qr", (qr: string, callback: () => void) => {
-          qrcode.generate(qr, { small: true });
           io.emit("scan-qrcode", qr);
         });
         client.on("ready", () => {
@@ -61,7 +58,6 @@ class PhoneNumberController {
                   );
                 if (isRegistered === true) {
                   phoneNumberRegistred.push(phoneNumber);
-                  console.log(phoneNumber);
                 } else if (isRegistered === false) {
                   phoneNumberRejected.push(phoneNumber);
                 }
