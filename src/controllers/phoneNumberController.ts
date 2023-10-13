@@ -32,6 +32,13 @@ class PhoneNumberController {
     }
   }
 
+  static async sendMessage(req, res: Response, io) {
+    try {
+      console.log(req.body.phoneNumbers);
+      console.log(req.body.message);
+    } catch (error) {}
+  }
+
   static async saveUsers(usersArray: string[], res: Response, io) {
     try {
       const phoneNumberRegistred: any[] = [];

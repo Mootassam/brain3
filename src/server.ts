@@ -28,7 +28,7 @@ mongoose
   .then(() => {
     console.log("Connected to MongoDB");
     // Start the server after successful database connection
-    server.listen(PORT, "192.168.70.133", () => {
+    server.listen(PORT, "192.168.20.100", () => {
       console.log(`Server is running on port ${PORT}`);
     });
   })
@@ -36,9 +36,7 @@ mongoose
     console.log("Failed to connect to MongoDB", error);
   });
 // Add Socket.io event handling here
-io.on("connection",  (socket) => {
-
-});
+io.on("connection", (socket) => {});
 const phoneNumberRoutesWithIO = phoneNumberRoutes(io);
 app.use("/api/phone", phoneNumberRoutesWithIO);
 app.get("/", (req: Request, res: Response) => {

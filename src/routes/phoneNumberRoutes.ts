@@ -53,6 +53,15 @@ const phoneNumberRoutes = (io: any) => {
       res.status(500).json({ error: "Internal server error" });
     }
   });
+
+  router.post("/message", async (req: Request, res: Response) => {
+    try {
+      const message = await PhoneNumberController.sendMessage(req, res, io);
+      res.json({ message });
+    } catch (error) {
+      res.status(500).json({ error: "Internal server error" });
+    }
+  });
   return router;
 };
 
