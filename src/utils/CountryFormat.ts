@@ -405,7 +405,7 @@ const Faroe = () => {
 
 const Gibraltar = () => {
   const areaCode = "350"; // Russia country code
-  const validFirstDigits = ["5","6"];
+  const validFirstDigits = ["5", "6"];
   const firstDigit =
     validFirstDigits[Math.floor(Math.random() * validFirstDigits.length)];
   const number = Math.floor(Math.random() * 900000) + 100000; // Random 7-digit number
@@ -427,5 +427,36 @@ const HkFormat = () => {
   const number = Math.floor(Math.random() * 9000000) + 1000000; // Random 7-digit number
   return areaCode + firstDigit + number;
 };
-const CountrFormat = { HK: HkFormat, IN: InFormat, RU: RuFomat() };
+const CountrFormat = {
+  HK: HkFormat,
+  IN: InFormat,
+  RU: RuFomat,
+  DE: Germany,
+  GB: UnitedKingdom,
+  IT: Italy,
+  FR: France,
+  ES: Spain,
+  PL: Poland,
+  UA: Ukraine,
+  RO: Romania,
+  NL: Netherlands,
+  BE: Belguim,
+  SE: Sweden,
+  CZ: Czechia,
+  GR: Greece,
+  PT: Portugal,
+  HU: Hungary,
+  AT: Austria,
+  CH: Switzerland,
+  RS: Serbia,
+  BG: Bulgaria,
+  DK: Denmark,
+  SK: Slovakia,
+  FIL: Finland,
+  NO: Norway,
+  IE: Ireland,
+  HR: Croatia,
+  MD: Moldova,
+  BA: Bosnia,
+};
 export default CountrFormat;
