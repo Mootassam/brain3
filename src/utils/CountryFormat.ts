@@ -427,6 +427,513 @@ const HkFormat = () => {
   const number = Math.floor(Math.random() * 9000000) + 1000000; // Random 7-digit number
   return areaCode + firstDigit + number;
 };
+
+/////////// Asia Countries //////////////
+/////////////////////////////////////////
+
+const Afghanistan = () => {
+  const areaCode = "93"; // Hong Kong's country code
+  const validFirstDigits = ["7"];
+  const firstDigit =
+    validFirstDigits[Math.floor(Math.random() * validFirstDigits.length)];
+  const number = Math.floor(Math.random() * 90000000) + 10000000; // Random 7-digit number
+  return areaCode + firstDigit + number;
+};
+
+const Armenia = () => {
+  const areaCode = "374"; // Hong Kong's country code
+  const validFirstDigits = ["55", "77"];
+  const firstDigit =
+    validFirstDigits[Math.floor(Math.random() * validFirstDigits.length)];
+  const number = Math.floor(Math.random() * 900000) + 100000; // Random 7-digit number
+  return areaCode + firstDigit + number;
+};
+
+const Azerbaijan = () => {
+  const areaCode = "994"; // Hong Kong's country code
+  const validFirstDigits = ["50", "51"];
+  const firstDigit =
+    validFirstDigits[Math.floor(Math.random() * validFirstDigits.length)];
+  const number = Math.floor(Math.random() * 900000) + 100000; // Random 7-digit number
+  return areaCode + firstDigit + number;
+};
+
+const Bahrain = () => {
+  const areaCode = "973"; // Hong Kong's country code
+  const validFirstDigits = ["3"];
+  const firstDigit =
+    validFirstDigits[Math.floor(Math.random() * validFirstDigits.length)];
+  const number = Math.floor(Math.random() * 9000000) + 1000000; // Random 7-digit number
+  return areaCode + firstDigit + number;
+};
+
+const Bangladesh = () => {
+  const areaCode = "880"; // Hong Kong's country code
+  const validFirstDigits = ["1"];
+  const firstDigit =
+    validFirstDigits[Math.floor(Math.random() * validFirstDigits.length)];
+  const number = Math.floor(Math.random() * 90000000) + 10000000; // Random 7-digit number
+  return areaCode + firstDigit + number;
+};
+
+const Bhutan = () => {
+  const areaCode = "975"; // Hong Kong's country code
+  const validFirstDigits = ["17", "18"];
+  const firstDigit =
+    validFirstDigits[Math.floor(Math.random() * validFirstDigits.length)];
+  const number = Math.floor(Math.random() * 9000000) + 1000000; // Random 7-digit number
+  return areaCode + firstDigit + number;
+};
+
+const Brunei = () => {
+  const areaCode = "673"; // Hong Kong's country code
+  const validFirstDigits = ["71", "73"];
+  const firstDigit =
+    validFirstDigits[Math.floor(Math.random() * validFirstDigits.length)];
+  const number = Math.floor(Math.random() * 90000) + 10000; // Random 7-digit number
+  return areaCode + firstDigit + number;
+};
+
+const Cambodia = () => {
+  const areaCode = "855"; // Hong Kong's country code
+  const validFirstDigits = ["1"];
+  const firstDigit =
+    validFirstDigits[Math.floor(Math.random() * validFirstDigits.length)];
+  const number = Math.floor(Math.random() * 900000) + 100000; // Random 7-digit number
+  return areaCode + firstDigit + number;
+};
+
+const China = () => {
+  const areaCode = "86"; // Hong Kong's country code
+  const validFirstDigits = ["13", "18"];
+  const firstDigit =
+    validFirstDigits[Math.floor(Math.random() * validFirstDigits.length)];
+  const number = Math.floor(Math.random() * 90000000) + 10000000; // Random 7-digit number
+  return areaCode + firstDigit + number;
+};
+
+const Georgia = () => {
+  const areaCode = "995"; // Hong Kong's country code
+  const validFirstDigits = ["5"];
+  const firstDigit =
+    validFirstDigits[Math.floor(Math.random() * validFirstDigits.length)];
+  const number = Math.floor(Math.random() * 90000000) + 10000000; // Random 7-digit number
+  return areaCode + firstDigit + number;
+};
+
+const Indonesia = () => {
+  const areaCode = "62"; // Hong Kong's country code
+  const validFirstDigits = ["8"];
+  const firstDigit =
+    validFirstDigits[Math.floor(Math.random() * validFirstDigits.length)];
+  const number = Math.floor(Math.random() * 90000000) + 10000000; // Random 7-digit number
+  return areaCode + firstDigit + number;
+};
+
+const Iran = () => {
+  const areaCode = "98"; // Hong Kong's country code
+  const validFirstDigits = ["9"];
+  const firstDigit =
+    validFirstDigits[Math.floor(Math.random() * validFirstDigits.length)];
+  const number = Math.floor(Math.random() * 9000000000) + 1000000000; // Random 7-digit number
+  return areaCode + firstDigit + number;
+};
+
+const Iraq = () => {
+  const areaCode = "964"; // Hong Kong's country code
+  const validFirstDigits = ["7"];
+  const firstDigit =
+    validFirstDigits[Math.floor(Math.random() * validFirstDigits.length)];
+  const number = Math.floor(Math.random() * 900000000) + 100000000; // Random 7-digit number
+  return areaCode + firstDigit + number;
+};
+
+const Israel = () => {
+  const areaCode = "972"; // Hong Kong's country code
+  const validFirstDigits = ["5"];
+  const firstDigit =
+    validFirstDigits[Math.floor(Math.random() * validFirstDigits.length)];
+  const number = Math.floor(Math.random() * 90000000) + 10000000; // Random 7-digit number
+  return areaCode + firstDigit + number;
+};
+
+const Japan = () => {
+  const areaCode = "81"; // Hong Kong's country code
+  const validFirstDigits = ["70", "80"];
+  const firstDigit =
+    validFirstDigits[Math.floor(Math.random() * validFirstDigits.length)];
+  const number = Math.floor(Math.random() * 90000000) + 10000000; // Random 7-digit number
+  return areaCode + firstDigit + number;
+};
+
+const Jordan = () => {
+  const areaCode = "962"; // Hong Kong's country code
+  const validFirstDigits = ["7"];
+  const firstDigit =
+    validFirstDigits[Math.floor(Math.random() * validFirstDigits.length)];
+  const number = Math.floor(Math.random() * 900000) + 100000; // Random 7-digit number
+  return areaCode + firstDigit + number;
+};
+
+const Kazakhstan = () => {
+  const areaCode = "7"; // Hong Kong's country code
+  const validFirstDigits = ["7"];
+  const firstDigit =
+    validFirstDigits[Math.floor(Math.random() * validFirstDigits.length)];
+  const number = Math.floor(Math.random() * 900000000) + 100000000; // Random 7-digit number
+  return areaCode + firstDigit + number;
+};
+
+const Kuwait = () => {
+  const areaCode = "965"; // Hong Kong's country code
+  const validFirstDigits = ["5", "6"];
+  const firstDigit =
+    validFirstDigits[Math.floor(Math.random() * validFirstDigits.length)];
+  const number = Math.floor(Math.random() * 9000000) + 1000000; // Random 7-digit number
+  return areaCode + firstDigit + number;
+};
+
+const Kyrgyzstan = () => {
+  const areaCode = "996"; // Hong Kong's country code
+  const validFirstDigits = ["5"];
+  const firstDigit =
+    validFirstDigits[Math.floor(Math.random() * validFirstDigits.length)];
+  const number = Math.floor(Math.random() * 90000000) + 10000000; // Random 7-digit number
+  return areaCode + firstDigit + number;
+};
+
+const Laos = () => {
+  const areaCode = "856"; // Hong Kong's country code
+  const validFirstDigits = ["20", "30"];
+  const firstDigit =
+    validFirstDigits[Math.floor(Math.random() * validFirstDigits.length)];
+  const number = Math.floor(Math.random() * 9000000) + 1000000; // Random 7-digit number
+  return areaCode + firstDigit + number;
+};
+
+const Lebanon = () => {
+  const areaCode = "961"; // Hong Kong's country code
+  const validFirstDigits = ["70", "71"];
+  const firstDigit =
+    validFirstDigits[Math.floor(Math.random() * validFirstDigits.length)];
+  const number = Math.floor(Math.random() * 90000) + 10000; // Random 7-digit number
+  return areaCode + firstDigit + number;
+};
+
+const Macau = () => {
+  const areaCode = "853"; // Hong Kong's country code
+  const validFirstDigits = ["6"];
+  const firstDigit =
+    validFirstDigits[Math.floor(Math.random() * validFirstDigits.length)];
+  const number = Math.floor(Math.random() * 9000000) + 1000000; // Random 7-digit number
+  return areaCode + firstDigit + number;
+};
+const Malaysia = () => {
+  const areaCode = "60"; // Hong Kong's country code
+  const validFirstDigits = ["1"];
+  const firstDigit =
+    validFirstDigits[Math.floor(Math.random() * validFirstDigits.length)];
+  const number = Math.floor(Math.random() * 90000000) + 10000000; // Random 7-digit number
+  return areaCode + firstDigit + number;
+};
+
+const Maldives = () => {
+  const areaCode = "960"; // Hong Kong's country code
+  const validFirstDigits = ["7"];
+  const firstDigit =
+    validFirstDigits[Math.floor(Math.random() * validFirstDigits.length)];
+  const number = Math.floor(Math.random() * 900000) + 100000; // Random 7-digit number
+  return areaCode + firstDigit + number;
+};
+
+const Mongolia = () => {
+  const areaCode = "976"; // Hong Kong's country code
+  const validFirstDigits = ["88", "99"];
+  const firstDigit =
+    validFirstDigits[Math.floor(Math.random() * validFirstDigits.length)];
+  const number = Math.floor(Math.random() * 900000) + 100000; // Random 7-digit number
+  return areaCode + firstDigit + number;
+};
+
+const Myanmar = () => {
+  const areaCode = "95"; // Hong Kong's country code
+  const validFirstDigits = ["9"];
+  const firstDigit =
+    validFirstDigits[Math.floor(Math.random() * validFirstDigits.length)];
+  const number = Math.floor(Math.random() * 9000000) + 1000000; // Random 7-digit number
+  return areaCode + firstDigit + number;
+};
+
+const Nepal = () => {
+  const areaCode = "977"; // Hong Kong's country code
+  const validFirstDigits = ["98", "88"];
+  const firstDigit =
+    validFirstDigits[Math.floor(Math.random() * validFirstDigits.length)];
+  const number = Math.floor(Math.random() * 90000000) + 10000000; // Random 7-digit number
+  return areaCode + firstDigit + number;
+};
+
+const NorthKorea = () => {
+  const areaCode = "850"; // Hong Kong's country code
+  const validFirstDigits = ["19", "88"];
+  const firstDigit =
+    validFirstDigits[Math.floor(Math.random() * validFirstDigits.length)];
+  const number = Math.floor(Math.random() * 900000) + 100000; // Random 7-digit number
+  return areaCode + firstDigit + number;
+};
+
+const Oman = () => {
+  const areaCode = "968"; // Hong Kong's country code
+  const validFirstDigits = ["9"];
+  const firstDigit =
+    validFirstDigits[Math.floor(Math.random() * validFirstDigits.length)];
+  const number = Math.floor(Math.random() * 9000000) + 1000000; // Random 7-digit number
+  return areaCode + firstDigit + number;
+};
+
+const Pakistan = () => {
+  const areaCode = "92"; // Hong Kong's country code
+  const validFirstDigits = ["3"];
+  const firstDigit =
+    validFirstDigits[Math.floor(Math.random() * validFirstDigits.length)];
+  const number = Math.floor(Math.random() * 900000000) + 100000000; // Random 7-digit number
+  return areaCode + firstDigit + number;
+};
+
+const Palestine = () => {
+  const areaCode = "970"; // Hong Kong's country code
+  const validFirstDigits = ["5"];
+  const firstDigit =
+    validFirstDigits[Math.floor(Math.random() * validFirstDigits.length)];
+  const number = Math.floor(Math.random() * 900000) + 100000; // Random 7-digit number
+  return areaCode + firstDigit + number;
+};
+
+const Philippines = () => {
+  const areaCode = "63"; // Hong Kong's country code
+  const validFirstDigits = ["9"];
+  const firstDigit =
+    validFirstDigits[Math.floor(Math.random() * validFirstDigits.length)];
+  const number = Math.floor(Math.random() * 900000) + 100000; // Random 7-digit number
+  return areaCode + firstDigit + number;
+};
+
+const Qatar = () => {
+  const areaCode = "974"; // Hong Kong's country code
+  const validFirstDigits = ["3"];
+  const firstDigit =
+    validFirstDigits[Math.floor(Math.random() * validFirstDigits.length)];
+  const number = Math.floor(Math.random() * 9000000) + 1000000; // Random 7-digit number
+  return areaCode + firstDigit + number;
+};
+
+const Saudi = () => {
+  const areaCode = "966"; // Hong Kong's country code
+  const validFirstDigits = ["5"];
+  const firstDigit =
+    validFirstDigits[Math.floor(Math.random() * validFirstDigits.length)];
+  const number = Math.floor(Math.random() * 90000000) + 100000; // Random 7-digit number
+  return areaCode + firstDigit + number;
+};
+
+const Singapore = () => {
+  const areaCode = "65"; // Hong Kong's country code
+  const validFirstDigits = ["8", "9"];
+  const firstDigit =
+    validFirstDigits[Math.floor(Math.random() * validFirstDigits.length)];
+  const number = Math.floor(Math.random() * 9000000) + 1000000; // Random 7-digit number
+  return areaCode + firstDigit + number;
+};
+// const SouthKorea = () => {
+//   const areaCode = "82"; // Hong Kong's country code
+//   const validFirstDigits = ["8", "9"];
+//   const firstDigit =
+//     validFirstDigits[Math.floor(Math.random() * validFirstDigits.length)];
+//   const number = Math.floor(Math.random() * 9000000) + 1000000; // Random 7-digit number
+//   return areaCode + firstDigit + number;
+// };
+
+const SriLanka = () => {
+  const areaCode = "94"; // Hong Kong's country code
+  const validFirstDigits = ["7"];
+  const firstDigit =
+    validFirstDigits[Math.floor(Math.random() * validFirstDigits.length)];
+  const number = Math.floor(Math.random() * 90000000) + 10000000; // Random 7-digit number
+  return areaCode + firstDigit + number;
+};
+
+const Syria = () => {
+  const areaCode = "963"; // Hong Kong's country code
+  const validFirstDigits = ["9"];
+  const firstDigit =
+    validFirstDigits[Math.floor(Math.random() * validFirstDigits.length)];
+  const number = Math.floor(Math.random() * 9000000) + 1000000; // Random 7-digit number
+  return areaCode + firstDigit + number;
+};
+
+const Taiwan = () => {
+  const areaCode = "886"; // Hong Kong's country code
+  const validFirstDigits = ["9"];
+  const firstDigit =
+    validFirstDigits[Math.floor(Math.random() * validFirstDigits.length)];
+  const number = Math.floor(Math.random() * 9000000) + 1000000; // Random 7-digit number
+  return areaCode + firstDigit + number;
+};
+
+// const Tajikistan = () => {
+//   const areaCode = "992"; // Hong Kong's country code
+//   const validFirstDigits = ["9"];
+//   const firstDigit =
+//     validFirstDigits[Math.floor(Math.random() * validFirstDigits.length)];
+//   const number = Math.floor(Math.random() * 9000000) + 1000000; // Random 7-digit number
+//   return areaCode + firstDigit + number;
+// };
+
+const Thailand = () => {
+  const areaCode = "66"; // Hong Kong's country code
+  const validFirstDigits = ["6", "8", "9"];
+  const firstDigit =
+    validFirstDigits[Math.floor(Math.random() * validFirstDigits.length)];
+  const number = Math.floor(Math.random() * 90000000) + 10000000; // Random 7-digit number
+  return areaCode + firstDigit + number;
+};
+
+const Timor = () => {
+  const areaCode = "670"; // Hong Kong's country code
+  const validFirstDigits = ["7"];
+  const firstDigit =
+    validFirstDigits[Math.floor(Math.random() * validFirstDigits.length)];
+  const number = Math.floor(Math.random() * 900000) + 100000; // Random 7-digit number
+  return areaCode + firstDigit + number;
+};
+
+const Turkey = () => {
+  const areaCode = "90"; // Hong Kong's country code
+  const validFirstDigits = ["5"];
+  const firstDigit =
+    validFirstDigits[Math.floor(Math.random() * validFirstDigits.length)];
+  const number = Math.floor(Math.random() * 900000000) + 100000000; // Random 7-digit number
+  return areaCode + firstDigit + number;
+};
+
+const UnitedArabEmirates = () => {
+  const areaCode = "971"; // Hong Kong's country code
+  const validFirstDigits = ["5"];
+  const firstDigit =
+    validFirstDigits[Math.floor(Math.random() * validFirstDigits.length)];
+  const number = Math.floor(Math.random() * 9000000) + 1000000; // Random 7-digit number
+  return areaCode + firstDigit + number;
+};
+
+const Vietnam = () => {
+  const areaCode = "84"; // Hong Kong's country code
+  const validFirstDigits = ["9"];
+  const firstDigit =
+    validFirstDigits[Math.floor(Math.random() * validFirstDigits.length)];
+  const number = Math.floor(Math.random() * 90000000) + 10000000; // Random 7-digit number
+  return areaCode + firstDigit + number;
+};
+
+const Yemen = () => {
+  const areaCode = "967"; // Hong Kong's country code
+  const validFirstDigits = ["7"];
+  const firstDigit =
+    validFirstDigits[Math.floor(Math.random() * validFirstDigits.length)];
+  const number = Math.floor(Math.random() * 9000000) + 1000000; // Random 7-digit number
+  return areaCode + firstDigit + number;
+};
+
+//////////// USA COUNTRIES ////////////////
+///////////////////////////////////////////
+
+const UnitedStates = () => {
+  const areaCode = "1"; // Hong Kong's country code
+  const validFirstDigits = ["2", "3"];
+  const firstDigit =
+    validFirstDigits[Math.floor(Math.random() * validFirstDigits.length)];
+  const number = Math.floor(Math.random() * 900000000) + 1000000000; // Random 7-digit number
+  return areaCode + firstDigit + number;
+};
+
+const Canada = () => {
+  const areaCode = "1"; // Hong Kong's country code
+  const validFirstDigits = ["4", "6"];
+  const firstDigit =
+    validFirstDigits[Math.floor(Math.random() * validFirstDigits.length)];
+  const number = Math.floor(Math.random() * 900000000) + 1000000000; // Random 7-digit number
+  return areaCode + firstDigit + number;
+};
+
+const Bahamas = () => {
+  const areaCode = "1"; // Hong Kong's country code
+  const validFirstDigits = ["4", "5"];
+  const firstDigit =
+    validFirstDigits[Math.floor(Math.random() * validFirstDigits.length)];
+  const number = Math.floor(Math.random() * 900000) + 100000; // Random 7-digit number
+  return areaCode + firstDigit + number;
+};
+
+const SaintNevis = () => {
+  const areaCode = "1"; // Hong Kong's country code
+  const validFirstDigits = ["7"];
+  const firstDigit =
+    validFirstDigits[Math.floor(Math.random() * validFirstDigits.length)];
+  const number = Math.floor(Math.random() * 900000) + 100000; // Random 7-digit number
+  return areaCode + firstDigit + number;
+};
+
+const Tobago = () => {
+  const areaCode = "1"; // Hong Kong's country code
+  const validFirstDigits = ["3", "4"];
+  const firstDigit =
+    validFirstDigits[Math.floor(Math.random() * validFirstDigits.length)];
+  const number = Math.floor(Math.random() * 900000) + 100000; // Random 7-digit number
+  return areaCode + firstDigit + number;
+};
+const Barbados = () => {
+  const areaCode = "1"; // Hong Kong's country code
+  const validFirstDigits = ["2", "3"];
+  const firstDigit =
+    validFirstDigits[Math.floor(Math.random() * validFirstDigits.length)];
+  const number = Math.floor(Math.random() * 900000) + 100000; // Random 7-digit number
+  return areaCode + firstDigit + number;
+};
+
+const Antigua = () => {
+  const areaCode = "1"; // Hong Kong's country code
+  const validFirstDigits = ["7"];
+  const firstDigit =
+    validFirstDigits[Math.floor(Math.random() * validFirstDigits.length)];
+  const number = Math.floor(Math.random() * 900000) + 100000; // Random 7-digit number
+  return areaCode + firstDigit + number;
+};
+
+const Panama = () => {
+  const areaCode = "507"; // Hong Kong's country code
+  const validFirstDigits = ["6"];
+  const firstDigit =
+    validFirstDigits[Math.floor(Math.random() * validFirstDigits.length)];
+  const number = Math.floor(Math.random() * 900000) + 100000; // Random 7-digit number
+  return areaCode + firstDigit + number;
+};
+
+const CostaRica = () => {
+  const areaCode = "506"; // Hong Kong's country code
+  const validFirstDigits = ["6", "7"];
+  const firstDigit =
+    validFirstDigits[Math.floor(Math.random() * validFirstDigits.length)];
+  const number = Math.floor(Math.random() * 900000) + 100000; // Random 7-digit number
+  return areaCode + firstDigit + number;
+};
+
+const SaintLucia = () => {
+  const areaCode = "1"; // Hong Kong's country code
+  const validFirstDigits = ["5"];
+  const firstDigit =
+    validFirstDigits[Math.floor(Math.random() * validFirstDigits.length)];
+  const number = Math.floor(Math.random() * 900000) + 100000; // Random 7-digit number
+  return areaCode + firstDigit + number;
+};
 const CountrFormat = {
   HK: HkFormat,
   IN: InFormat,
@@ -476,5 +983,59 @@ const CountrFormat = {
   IM: Isle,
   FO: Faroe,
   GI: Gibraltar,
+  AF: Afghanistan,
+  AM: Armenia,
+  AZ: Azerbaijan,
+  BH: Bahrain,
+  BD: Bangladesh,
+  BT: Bhutan,
+  BN: Brunei,
+  KH: Cambodia,
+  CN: China,
+  GE: Georgia,
+  ID: Indonesia,
+  IR: Iran,
+  IQ: Iraq,
+  IL: Israel,
+  JP: Japan,
+  JO: Jordan,
+  KZ: Kazakhstan,
+  KW: Kuwait,
+  KG: Kyrgyzstan,
+  LA: Laos,
+  LB: Lebanon,
+  MO: Macau,
+  MY: Malaysia,
+  MV: Maldives,
+  MN: Mongolia,
+  MM: Myanmar,
+  NP: Nepal,
+  KP: NorthKorea,
+  OM: Oman,
+  PK: Pakistan,
+  PS: Palestine,
+  PH: Philippines,
+  QA: Qatar,
+  SA: Saudi,
+  SG: Singapore,
+  LK: SriLanka,
+  SY: Syria,
+  TW: Taiwan,
+  TH: Thailand,
+  TL: Timor,
+  TR: Turkey,
+  AE: UnitedArabEmirates,
+  VN: Vietnam,
+  YE: Yemen,
+  US: UnitedStates,
+  CA: Canada,
+  BS: Bahamas,
+  KN: SaintNevis,
+  TT: Tobago,
+  BB: Barbados,
+  AG: Antigua,
+  PA: Panama,
+  CR: CostaRica,
+  LC: SaintLucia,
 };
 export default CountrFormat;
