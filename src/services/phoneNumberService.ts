@@ -1,11 +1,5 @@
 import PhoneNumberController from "../controllers/phoneNumberController";
 
-class PhoneNumberService {
-  
+class PhoneNumberService {}
 
-
-
-  }
-  
-  export default PhoneNumberService;
-  
+export default PhoneNumberService;

@@ -32,11 +32,47 @@ class PhoneNumberController {
     }
   }
 
-  static async sendMessage(req, res: Response, io) {
+  static async Connect(req, res, io) {}
+
+  static Logout(req, res, io) {}
+
+  static async sendChat(req, res, io) {
+    const phone = "4407903684563"; // Replace with the target phone number in international format
+    const message = req.body.message;
+
     try {
-      console.log(req.body.phoneNumbers);
-      console.log(req.body.message);
-    } catch (error) {}
+      if (phone === undefined || message === undefined) {
+        res.status(400).json({
+          status: "error",
+          message: "Please provide a valid phone number and message",
+        });
+        return;
+      }
+
+      const chat = await PhoneNumberController.client.getChatById(
+        phone + "@c.us"
+      );
+
+      if (!chat) {
+        res.status(400).json({
+          status: "error",
+          message: `Invalid recipient: ${phone}`,
+        });
+        return;
+      }
+      chat.sendMessage(message).then(() => {
+        res.status(200).json({
+          status: "success",
+          message: `Message successfully sent to ${phone}`,
+        });
+      });
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({
+        status: "error",
+        message: "Failed to send the message",
+      });
+    }
   }
 
   static async saveUsers(usersArray: string[], res: Response, io) {
@@ -95,7 +131,6 @@ class PhoneNumberController {
                 );
               if (isRegistered === true) {
                 phoneNumberRegistred.push(phoneNumber);
-                console.log(phoneNumber);
               } else if (isRegistered === false) {
                 phoneNumberRejected.push(phoneNumber);
               }
