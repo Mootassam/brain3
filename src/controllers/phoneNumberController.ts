@@ -1,8 +1,9 @@
 import { Request, Response } from "express";
-
 import PhoneNumberGenerator from "../utils/phoneNumberGenerator";
+import schedule from "node-schedule";
+
 const { Client } = require("whatsapp-web.js");
-import { Server } from "socket.io";
+import { Server, Socket } from "socket.io";
 import { createObjectCsvStringifier } from "csv-writer";
 import fs from "fs";
 import multer, { Multer } from "multer";
@@ -32,47 +33,59 @@ class PhoneNumberController {
     }
   }
 
-  static async Connect(req, res, io) {}
+  static async Connect(req, res, io) {
+
+
+    
+  }
 
   static Logout(req, res, io) {}
 
   static async sendChat(req, res, io) {
-    const phone = "4407903684563"; // Replace with the target phone number in international format
-    const message = req.body.message;
+    const phoneNumbers = ["4407903684563"]; // Replace with your array of phone numbers
+    const message = req.body.message; // Replace with your message
+    let currentIndex = 0; // Initialize the current phone number index to 0
 
-    try {
-      if (phone === undefined || message === undefined) {
-        res.status(400).json({
-          status: "error",
-          message: "Please provide a valid phone number and message",
-        });
-        return;
+    await schedule.scheduleJob("*/1 * * * *", async () => {
+      if (currentIndex < phoneNumbers.length) {
+        const phone = phoneNumbers[currentIndex];
+
+        try {
+          if (phone === undefined || message === undefined) {
+            res.status(400).json({
+              status: "error",
+              message: "Please provide a valid phone number and message",
+            });
+            return;
+          }
+
+          const chat = await PhoneNumberController.client.getChatById(
+            phone + "@c.us"
+          );
+
+          if (!chat) {
+            res.status(400).json({
+              status: "error",
+              message: `Invalid recipient: ${phone}`,
+            });
+            return;
+          }
+
+          await chat.sendMessage(message).then(() => {
+            io.emit("sent__number", phone);
+            currentIndex++; // Increment the index to send to the next phone number
+          });
+        } catch (error) {
+          console.error(error);
+          res.status(500).json({
+            status: "error",
+            message: "Failed to send the message",
+          });
+        }
+      } else {
+        io.emit("done");
       }
-
-      const chat = await PhoneNumberController.client.getChatById(
-        phone + "@c.us"
-      );
-
-      if (!chat) {
-        res.status(400).json({
-          status: "error",
-          message: `Invalid recipient: ${phone}`,
-        });
-        return;
-      }
-      chat.sendMessage(message).then(() => {
-        res.status(200).json({
-          status: "success",
-          message: `Message successfully sent to ${phone}`,
-        });
-      });
-    } catch (error) {
-      console.error(error);
-      res.status(500).json({
-        status: "error",
-        message: "Failed to send the message",
-      });
-    }
+    });
   }
 
   static async saveUsers(usersArray: string[], res: Response, io) {

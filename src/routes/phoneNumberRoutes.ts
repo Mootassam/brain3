@@ -1,6 +1,5 @@
 import express, { Request, Response, Router } from "express";
 import PhoneNumberController from "../controllers/phoneNumberController";
-
 const router: Router = express.Router();
 
 // Initialize Socket.io (assuming it's already set up in your app)
@@ -57,6 +56,7 @@ const phoneNumberRoutes = (io: any) => {
   router.post("/message", async (req: Request, res: Response) => {
     try {
       await PhoneNumberController.sendChat(req, res, io);
+      res.status(200).json({ message: "succuess" });
     } catch (error) {
       res.status(500).json({ error: "Internal server error" });
     }
