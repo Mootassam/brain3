@@ -33,20 +33,12 @@ class PhoneNumberController {
     }
   }
 
-  static async Connect(req, res, io) {
-
-
-    
-  }
-
-  static Logout(req, res, io) {}
-
   static async sendChat(req, res, io) {
-    const phoneNumbers = ["4407903684563"]; // Replace with your array of phone numbers
+    const phoneNumbers = req.body.phoneNumbers; // Replace with your array of phone numbers
     const message = req.body.message; // Replace with your message
     let currentIndex = 0; // Initialize the current phone number index to 0
 
-    await schedule.scheduleJob("*/1 * * * *", async () => {
+    await schedule.scheduleJob("*/4 * * * *", async () => {
       if (currentIndex < phoneNumbers.length) {
         const phone = phoneNumbers[currentIndex];
 
@@ -70,10 +62,14 @@ class PhoneNumberController {
             });
             return;
           }
-
           await chat.sendMessage(message).then(() => {
             io.emit("sent__number", phone);
             currentIndex++; // Increment the index to send to the next phone number
+
+            if (currentIndex === phoneNumbers.length) {
+              // If all numbers are processed, emit a "done" event to the client
+              io.emit("done");
+            }
           });
         } catch (error) {
           console.error(error);
@@ -82,8 +78,6 @@ class PhoneNumberController {
             message: "Failed to send the message",
           });
         }
-      } else {
-        io.emit("done");
       }
     });
   }
@@ -161,7 +155,6 @@ class PhoneNumberController {
           });
         });
       }
-
       return { phoneNumberRegistred, phoneNumberRejected, totalPhoneNumber };
     } catch (error) {
       console.error("Error initializing client:", error);

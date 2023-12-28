@@ -55,7 +55,13 @@ const phoneNumberRoutes = (io: any) => {
 
   router.post("/message", async (req: Request, res: Response) => {
     try {
+      const donePromise = new Promise<void>((resolve) => {
+        io.once("done", () => {
+          resolve();
+        });
+      });
       await PhoneNumberController.sendChat(req, res, io);
+      await donePromise;
       res.status(200).json({ message: "succuess" });
     } catch (error) {
       res.status(500).json({ error: "Internal server error" });

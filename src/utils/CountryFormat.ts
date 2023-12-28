@@ -851,7 +851,7 @@ const UnitedStates = () => {
   const validFirstDigits = ["2", "3"];
   const firstDigit =
     validFirstDigits[Math.floor(Math.random() * validFirstDigits.length)];
-  const number = Math.floor(Math.random() * 900000000) + 1000000000; // Random 7-digit number
+  const number = Math.floor(Math.random() * 90000000) + 100000000; // Random 7-digit number
   return areaCode + firstDigit + number;
 };
 
