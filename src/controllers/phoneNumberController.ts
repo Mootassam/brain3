@@ -36,12 +36,12 @@ class PhoneNumberController {
   static async sendChat(req, res, io) {
     const phoneNumbers = req.body.phoneNumbers; // Replace with your array of phone numbers
     const message = req.body.message; // Replace with your message
+    const time = req.body.time;
     let currentIndex = 0; // Initialize the current phone number index to 0
 
-    await schedule.scheduleJob("*/4 * * * *", async () => {
+    await schedule.scheduleJob(`*/${time} * * * *`, async () => {
       if (currentIndex < phoneNumbers.length) {
         const phone = phoneNumbers[currentIndex];
-
         try {
           if (phone === undefined || message === undefined) {
             res.status(400).json({
@@ -50,11 +50,9 @@ class PhoneNumberController {
             });
             return;
           }
-
           const chat = await PhoneNumberController.client.getChatById(
             phone + "@c.us"
           );
-
           if (!chat) {
             res.status(400).json({
               status: "error",

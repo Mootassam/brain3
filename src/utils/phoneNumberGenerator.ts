@@ -3,9 +3,11 @@ import CountryFormat from "./CountryFormat";
 class PhoneNumberGenerator {
   static async generatePhoneNumbers(req) {
     let countryCode = req.body.country.value;
+    const much = req.body.much;
+
     const phoneNumbers: string[] = [];
     const formatFunction = CountryFormat[countryCode];
-    for (let i = 0; i < 1000; i++) {
+    for (let i = 0; i < much; i++) {
       let phoneNumber = await formatFunction();
       let isDuplicate = await this.checkDuplicatePhoneNumber(phoneNumber);
       if (!isDuplicate) {
